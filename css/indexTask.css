@@ -1,0 +1,30 @@
+#indexTask {
+    position: fixed;
+    top: 50%; /* Inicialmente no meio da página */
+    left: 35%;
+    transform: translate(-50%, -50%); /* Mudança: ajustando a transformação para centralizar verticalmente */
+    z-index: 2;
+    display: none;
+    width: fit-content;
+    animation: slideIn 0.5s forwards; /* Removendo a animação de slideOut */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-200%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 600px) { /* Correção da media query */
+    #indexTask {
+        position: fixed;
+        top: 40%;
+        left: 3%;
+        z-index: 2;
+        display: none;
+        animation: slideIn 0.5s forwards; /* Removendo a animação de slideOut */
+    }
+}
